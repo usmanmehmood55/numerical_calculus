@@ -62,7 +62,7 @@ double calculate_derivative(const ring_buffer *rb, uint16_t index, double time_i
 ### Integral
 Integrals can be taken using the typical trapezoidal method.
 
-$$ \int_{a}^{b}{f(x) \space dx} = \frac{\Delta t}{2} \left\{ f(a) + 2 \sum_{i=a+1}^{b-1} f(x_i) + f(b) \right\} $$
+$$ \int_{a}^{b}{f(x) \space dx} = \frac{\Delta t}{2} \left{ f(a) + 2 \sum_{i=a+1}^{b-1} f(x_i) + f(b) \right} $$
 
 This is implemented as
 ```c
@@ -89,7 +89,7 @@ double trapezoidal(const ring_buffer *rb, double time_interval)
 
 However a more accurate integral is also taken using this modified method
 
-$$ \int_{a}^{b}{f(x) \space dx} = \frac{\Delta t}{2} \space \sum_{i=a}^{b} \left\{  f(x_i) + f(x_{i-1}) \right\} $$
+$$ \int_{a}^{b}{f(x) \space dx} = \frac{\Delta t}{2} \space \sum_{i=a}^{b} \left{  f(x_i) + f(x_{i-1}) \right} $$
 
 This is implemented as
 ```c
@@ -116,7 +116,7 @@ double calculate_integral(const ring_buffer *rb, double time_interval)
 
 In this code example, the input data set is 1 to 10
 
-$$ \left\{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 \right\}$$
+$$ \left{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 \right}$$
 
 The function used is
 
@@ -124,20 +124,20 @@ $$ y = x^3 $$
 
 Which makes the function output dataset used for calculations
 
-$$ \left\{ 1, 8, 27, 64, 125, 216, 343, 512, 729, 1000 \right\}$$
+$$ \left{ 1, 8, 27, 64, 125, 216, 343, 512, 729, 1000 \right}$$
 
 The exact integral should be $2500$, and the exact derivative at each point 
 should be:
 
-$$ \left\{ 3, 12, 27, 48, 75, 108, 147, 192, 243, 300 \right\}$$
+$$ \left{ 3, 12, 27, 48, 75, 108, 147, 192, 243, 300 \right}$$
 
 When the time delta is 1 unit, the numerical integral is $2524.500000$ and the 
 numerical derivative at each point is:
 
-$$ \left\{ 1, 7, 19, 37, 61, 91, 127, 169, 217, 271 \right\}$$
+$$ \left{ 1, 7, 19, 37, 61, 91, 127, 169, 217, 271 \right}$$
 
 When the time delta is reduced from 1 unit to 0.001 unit, the numerical 
 integral becomes 2500.000025 and the numerical derivative at each point 
 becomes:
 
-$$ \left\{ 3, 11.99, 26.99, 47.99, 74.99, 107.98, 146.98, 191.98, 242.97, 299.97 \right\}$$
+$$ \left{ 3, 11.99, 26.99, 47.99, 74.99, 107.98, 146.98, 191.98, 242.97, 299.97 \right}$$
