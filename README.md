@@ -2,7 +2,7 @@
 
 This code shows how numerical integrals and derivatives are taken of a given 
 dataset. It is used as an example and a testing place for a relatively more 
-complicated code, the [PID Controller](github.com/usmanmehmood55/pid_controller). 
+complicated code, the [PID Controller](https://github.com/usmanmehmood55/pid_controller). 
 
 The code starts with initializing the number of samples in the dataset, and the
 resolution factor. The resolution factor dictates the time delta, and therefore
