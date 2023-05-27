@@ -152,8 +152,8 @@ Which makes the function output dataset used for calculations
 
 $$ \\{ 1, 8, 27, 64, 125, 216, 343, 512, 729, 1000 \\} $$
 
-The exact integral should be $2500$, and the exact derivative at each point 
-should be:
+The exact integral should be $2500$, and the exact derivative using the 
+equation $y=3x^2$ at each point should be:
 
 $$ \\{ 3, 12, 27, 48, 75, 108, 147, 192, 243, 300 \\} $$
 
