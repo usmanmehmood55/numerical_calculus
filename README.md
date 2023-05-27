@@ -33,7 +33,7 @@ for (uint16_t i = 1; i <= rb.size; i++)
 }
 ```
 
-A function $y=f(x)$ is implemented as `double f (double x)` is also 
+A function $y=f(x)$ implemented as `double f (double x)` is also 
 declared, upon which derivation and integration would be performed. In this 
 code example it is set to $y=x^3$
 
@@ -87,7 +87,7 @@ double trapezoidal(const ring_buffer *rb, double time_interval)
 }
 ```
 
-However a more accurate integral is also taken using this modified method
+However a more accurate integral is taken using this modified method
 
 $$ \int_{a}^{b}{f(x) \space dx} = \frac{\Delta t}{2} \space \sum_{i=a}^{b} \\{  f(x_i) + f(x_{i-1}) \\} $$
 
