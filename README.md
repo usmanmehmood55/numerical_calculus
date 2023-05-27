@@ -18,10 +18,14 @@ const uint16_t buffer_size       = (uint16_t)((double)sample_count / time_const)
 It should be noted that specifically using a ring buffer instead of a usual 
 buffer has no purpose in these calculations, but due to the application, it 
 has to be used int the PID Controller project so it is being used here as 
-well. 
+well.
 
-The ring buffer is then initialized, and filled with values starting from
-0 to the `sample_count`.
+A function $y=f(x)$ implemented as `double f (double x)` is also 
+declared, upon which derivation and integration would be performed. In this 
+code example it is set to $y=x^3$
+
+The ring buffer is then initialized, and filled with output values of the 
+function `double f (double x)`, with inputs starting from 0 to `sample_count`.
 ```c
 ring_buffer rb;
 ring_buffer_init(&rb, buffer_size);
@@ -33,9 +37,7 @@ for (uint16_t i = 1; i <= rb.size; i++)
 }
 ```
 
-A function $y=f(x)$ implemented as `double f (double x)` is also 
-declared, upon which derivation and integration would be performed. In this 
-code example it is set to $y=x^3$
+
 
 ## Explanation of Calculating Functions
 
