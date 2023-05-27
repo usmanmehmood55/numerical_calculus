@@ -2,7 +2,33 @@
 
 This code shows how numerical integrals and derivatives are taken of a given 
 dataset. It is used as an example and a testing place for a relatively more 
-complicated code, the [PID Controller](https://github.com/usmanmehmood55/pid_controller). 
+complicated code, the [PID Controller](https://github.com/usmanmehmood55/pid_controller).
+
+## Setup
+
+To get the code running, create a build folder, and go into it.
+```
+mkdir build
+cd build/
+```
+
+Then use [CMake](https://cmake.org/download/) to generate make files.
+```
+cmake ../CMakeLists.txt 
+```
+
+And finally use make to build
+```
+make .
+```
+
+Then launch the executable
+```
+./numerical_calc.exe
+```
+
+
+## Explanation of General Code
 
 The code starts with initializing the number of samples in the dataset, and the
 resolution factor. The resolution factor dictates the time delta, and therefore
@@ -36,8 +62,6 @@ for (uint16_t i = 1; i <= rb.size; i++)
     ring_buffer_add(&rb, f(number));
 }
 ```
-
-
 
 ## Explanation of Calculating Functions
 
