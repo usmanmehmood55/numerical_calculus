@@ -21,12 +21,13 @@
 #include "ring_buffer.h"
 
 /**
- * @brief 
+ * @brief This function calculates the integral of the provided dataset using
+ * a modified trapezoidal method.
  * 
- * @param rb 
- * @param time_interval 
+ * @param rb            Ring buffer containing the dataset
+ * @param time_interval Time interval of the dataset
  * 
- * @return double 
+ * @return double       Integral of the dataset
  */
 double calculate_integral(const ring_buffer *rb, double time_interval)
 {
@@ -47,12 +48,13 @@ double calculate_integral(const ring_buffer *rb, double time_interval)
 }
 
 /**
- * @brief 
+ * @brief This function calculates the integral of the provided dataset using
+ * the trapezoidal method.
  * 
- * @param rb 
- * @param time_interval 
+ * @param rb            Ring buffer containing the dataset
+ * @param time_interval Time interval of the dataset
  * 
- * @return double 
+ * @return double       Integral of the dataset
  */
 double trapezoidal(const ring_buffer *rb, double time_interval)
 {
@@ -75,13 +77,14 @@ double trapezoidal(const ring_buffer *rb, double time_interval)
 }
 
 /**
- * @brief 
+ * @brief This function calculates the derivative of a given dataset on a give
+ * index point.
  * 
- * @param  rb            
- * @param  index         
- * @param  time_interval 
+ * @param  rb            Ring buffer containing the dataset
+ * @param  index         Index to take derivative for
+ * @param  time_interval Time interval of the dataset
  * 
- * @return double        
+ * @return double        Derivative at index
  */
 double calculate_derivative(const ring_buffer *rb, uint16_t index, double time_interval)
 {
@@ -99,9 +102,9 @@ double calculate_derivative(const ring_buffer *rb, uint16_t index, double time_i
  * @brief This is the function for which integral and derivatives are calculated.
  * it can be changed to anything else for testing. Right now it is y = x^3
  * 
- * @param  x        input of function
+ * @param  x        Input of function
  * 
- * @return double   output of function
+ * @return double   Output of function
  */
 double f (double x)
 {
