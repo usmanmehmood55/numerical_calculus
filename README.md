@@ -2,7 +2,15 @@
 
 This code shows how numerical integrals and derivatives are taken of a given 
 dataset. It is used as an example and a testing place for a relatively more 
-complicated code, the [PID Controller](https://github.com/usmanmehmood55/pid_controller).
+complicated application, the [PID Controller](https://github.com/usmanmehmood55/pid_controller).
+
+- [Numerical Calculus](#numerical-calculus)
+  - [Setup](#setup)
+  - [Explanation of General Code](#explanation-of-general-code)
+  - [Explanation of Calculating Functions](#explanation-of-calculating-functions)
+    - [Derivative](#derivative)
+    - [Integral](#integral)
+  - [Results](#results)
 
 ## Setup
 
@@ -41,6 +49,7 @@ const uint16_t resolution_factor = 3000;
 const double   time_const        = 1.0 / (double)resolution_factor;
 const uint16_t buffer_size       = (uint16_t)((double)sample_count / time_const);
 ```
+
 It should be noted that specifically using a ring buffer instead of a usual 
 buffer has no purpose in these calculations, but due to the application, it 
 has to be used int the PID Controller project so it is being used here as 
